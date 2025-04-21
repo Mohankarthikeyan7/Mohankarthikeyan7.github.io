@@ -1,68 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Works | Mohan Karthikeyan</title>
-  <link href="assets/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://kit.fontawesome.com/48bcbf2c30.css" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/48bcbf2c30.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohan - DevOps Projects</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="src/index.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-accent-dark text-accent-light font-inter">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-accent-dark/90 backdrop-blur-sm border-b border-accent-light/20 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-accent-blue">Mohan Karthikeyan</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="text-accent-blue hover:text-accent-light transition-colors">Home</a>
+                    <a href="/works.html" class="text-accent-blue hover:text-accent-light transition-colors">Works</a>
+                    <a href="/contact.html" class="text-accent-blue hover:text-accent-light transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <main class="container">
-    <section id="works" class="section">
-      <h2 class="section-title">My DevOps Projects</h2>
+    <!-- Projects Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl font-bold text-accent-blue mb-12">Featured Projects</h1>
+            
+            <!-- ELK Stack Project -->
+            <div class="bg-accent-dark border border-accent-light/20 rounded-lg p-8 mb-8 hover:border-accent-blue transition-colors">
+                <h2 class="text-2xl font-bold text-accent-blue mb-4">ELK Stack DevOps Project: Real-Time Log Monitoring on AWS Cloud</h2>
+                <p class="text-accent-light/80 mb-6">
+                    Implemented a centralized logging and monitoring solution using the ELK Stack (Elasticsearch, Logstash, Kibana) on AWS Instances.
+                </p>
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">Filebeat: Installed on EC2 instance to ship logs efficiently</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">Logstash: Parsing and transforming incoming logs with custom grok patterns</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">Kibana: Providing powerful visualizations and dashboards for real-time monitoring</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">AWS: Leveraging EC2, IAM, and VPC configurations for scalable and secure deployment</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">AWS</span>
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">ELK Stack</span>
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">DevOps</span>
+                </div>
+            </div>
 
-      <!-- Project 1 -->
-      <div class="project-box">
-        <h3>🔍 ELK Stack Real-Time Log Monitoring (AWS)</h3>
-        <p>
-          Built a centralized logging and monitoring system using the ELK Stack (Elasticsearch, Logstash, Kibana) on AWS.
-        </p>
-        <ul>
-          <li><strong>Filebeat:</strong> Installed on EC2 for log shipping</li>
-          <li><strong>Logstash:</strong> Custom grok filters to parse logs</li>
-          <li><strong>Kibana:</strong> Real-time dashboards & visualization</li>
-          <li><strong>AWS:</strong> Used EC2, IAM roles, and secure VPC setup</li>
-        </ul>
-        <a class="project-link" href="https://www.linkedin.com/posts/mohan-karthick_devops-elkstack-aws-activity-7319134785472245761-1Z9g" target="_blank">
-          View Full Project on LinkedIn <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
+            <!-- Cloud Native Project -->
+            <div class="bg-accent-dark border border-accent-light/20 rounded-lg p-8 mb-8 hover:border-accent-blue transition-colors">
+                <h2 class="text-2xl font-bold text-accent-blue mb-4">AWS Cloud-Native Monitoring Application</h2>
+                <p class="text-accent-light/80 mb-6">
+                    Built and deployed a cloud-native monitoring web application using Python with comprehensive AWS service integration.
+                </p>
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">Amazon EKS: Orchestrating containers for scalable deployment</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">Amazon ECR: Managing and storing Docker images securely</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">EC2: Providing reliable compute resources</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-accent-blue mr-2">•</span>
+                        <p class="text-accent-light/80">IAM: Implementing secure access control and permissions</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">AWS</span>
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">EKS</span>
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">Python</span>
+                    <span class="px-3 py-1 bg-accent-dark border border-accent-light/20 text-accent-blue rounded-full text-sm">Docker</span>
+                </div>
+            </div>
 
-      <!-- Project 2 -->
-      <div class="project-box">
-        <h3>🚀 AWS Cloud-Native Monitoring App (EKS + Python)</h3>
-        <p>
-          Deployed a Python-based web monitoring app using containerized microservices and AWS native tools.
-        </p>
-        <ul>
-          <li><strong>EKS:</strong> Managed Kubernetes for orchestration</li>
-          <li><strong>ECR:</strong> Docker images securely stored and pulled</li>
-          <li><strong>EC2:</strong> Supporting compute infrastructure</li>
-          <li><strong>IAM:</strong> Fine-grained permissions & roles</li>
-        </ul>
-        <a class="project-link" href="https://www.linkedin.com/posts/mohan-karthick_aws-eks-devops-activity-7318748789375131649-i5OI" target="_blank">
-          View Full Project on LinkedIn <i class="fa-brands fa-linkedin"></i>
-        </a>
-      </div>
-
-      <!-- Coming Soon -->
-      <div class="project-box coming-soon">
-        <h3>⚙️ Upcoming Projects</h3>
-        <p>More projects in progress and coming soon:</p>
-        <ul>
-          <li>CI/CD Pipelines with GitHub Actions</li>
-          <li>Terraform for Infrastructure as Code (IaC)</li>
-          <li>Monitoring with Prometheus & Grafana</li>
-          <li>Serverless Architecture with AWS Lambda</li>
-        </ul>
-      </div>
-
+            <!-- Additional Skills Section -->
+            <div class="mt-16">
+                <h2 class="text-2xl font-bold text-accent-blue mb-8">Technical Expertise</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-accent-dark border border-accent-light/20 rounded-lg p-6 hover:border-accent-blue transition-colors">
+                        <h3 class="text-xl font-semibold text-accent-blue mb-4">Cloud Platforms</h3>
+                        <ul class="space-y-2 text-accent-light/80">
+                            <li>• AWS (EC2, EKS, ECR, IAM, VPC)</li>
+                            <li>• Azure Cloud Services</li>
+                            <li>• Cloud Architecture Design</li>
+                        </ul>
+                    </div>
+                    <div class="bg-accent-dark border border-accent-light/20 rounded-lg p-6 hover:border-accent-blue transition-colors">
+                        <h3 class="text-xl font-semibold text-accent-blue mb-4">DevOps Tools</h3>
+                        <ul class="space-y-2 text-accent-light/80">
+                            <li>• Docker & Kubernetes</li>
+                            <li>• Jenkins & GitLab CI</li>
+                            <li>• Terraform & Ansible</li>
+                        </ul>
+                    </div>
+                    <div class="bg-accent-dark border border-accent-light/20 rounded-lg p-6 hover:border-accent-blue transition-colors">
+                        <h3 class="text-xl font-semibold text-accent-blue mb-4">Monitoring & Logging</h3>
+                        <ul class="space-y-2 text-accent-light/80">
+                            <li>• ELK Stack Implementation</li>
+                            <li>• Prometheus & Grafana</li>
+                            <li>• Log Analysis & Alerting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
+    <!-- Footer -->
+    <footer class="bg-accent-dark py-8 border-t border-accent-light/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.linkedin.com/in/mohan-karthick" class="text-accent-blue hover:text-accent-light transition-colors">LinkedIn</a>
+                <a href="mailto:mohankarthick52@gmail.com" class="text-accent-blue hover:text-accent-light transition-colors">Email</a>
+                <a href="tel:+447407036084" class="text-accent-blue hover:text-accent-light transition-colors">+44 7407036084</a>
+            </div>
+            <p class="text-center text-accent-light/60">
+                © 2024 Mohan Karthikeyan. All rights reserved.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
