@@ -6,13 +6,13 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Home = () => {
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS", "Azure", "GCP"] },
-    { category: "CI/CD", items: ["GitHub Actions", "Azure DevOps", "Jenkins"] },
+    { category: "Cloud Platforms", items: ["AWS", "Azure", "GCP", "On-prem Data Center"] },
+    { category: "CI/CD", items: ["GitHub Actions", "Azure DevOps", "Jenkins", "CodePipeline"] },
     { category: "Containerization", items: ["Docker", "Kubernetes", "ECS", "Portainer"] },
     { category: "IaC", items: ["Terraform", "Ansible", "CloudFormation"] },
-    { category: "Monitoring", items: ["Grafana", "Loki", "Prometheus", "CloudWatch"] },
-    { category: "Scripting", items: ["Bash", "Python"] },
-    { category: "Operating Systems", items: ["Linux (RHEL & Ubuntu)", "Windows"] },
+    { category: "Monitoring", items: ["Grafana", "Loki", "Prometheus", "CloudWatch", "Zabbix"] },
+    { category: "Scripting", items: ["Bash", "Python", "Yaml"] },
+    { category: "Operating Systems", items: ["Linux (RHEL, Debian & Ubuntu)", "Windows"] },
     { category: "Source Control", items: ["GitHub", "GitLab"] },
     { category: "Code Quality", items: ["SonarQube"] },
   ];
@@ -32,7 +32,7 @@ const Home = () => {
         "Container Monitoring: Monitored containerized applications using Grafana, Loki, and Promtail, providing real-time insights and improving system reliability.",
         "On-Prem Development Environment: Managed the on-prem development environment using Proxmox, facilitating efficient resource allocation and virtualization."
       ],
-      skills: ["AWS CodePipeline", "Grafana"]
+      skills: ["AWS", "GCP", "On-prem Server"]
     },
     {
       company: "GAVS Technologies",
@@ -47,7 +47,7 @@ const Home = () => {
         "Enhanced security protocols by managing IAM roles and performing routine key rotations.",
         "Boosted operational visibility with custom dashboards on Prometheus and Grafana."
       ],
-      skills: ["AWS CodePipeline", "DevOps"]
+      skills: ["AWS", "Azure"]
     },
     {
       company: "Tata Communications Transformation Services (TCTS)",
@@ -61,7 +61,7 @@ const Home = () => {
         "Created secure and cost-effective solutions with DynamoDB, Lambda, and VPC configurations.",
         "Ensured system reliability by implementing AWS-native load balancers and fault-tolerant architectures."
       ],
-      skills: ["Jira", "Cloud Infrastructure"]
+      skills: ["AWS", "Cloud Infrastructure"]
     },
     {
       company: "ACT FIBERNET",
@@ -74,7 +74,7 @@ const Home = () => {
         "Supervised critical fault rectifications, achieving SLA compliance and receiving performance incentives.",
         "Collaborated with the NOC team during crises, ensuring minimal service disruption during natural disasters."
       ],
-      skills: ["VLAN", "LAN Switching"]
+      skills: ["Networking", "Security"]
     },
     {
       company: "ACT FIBERNET",
