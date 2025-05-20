@@ -112,7 +112,7 @@ const Home = () => {
                 <a href="https://github.com/mohankarthikeyan7" className="text-white hover:text-devops-teal transition-colors" aria-label="GitHub">
                   <Github size={24} />
                 </a>
-                <a href="https://linkedin.com/in/mohankarthikeyan" className="text-white hover:text-devops-teal transition-colors" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/mohan-karthick" className="text-white hover:text-devops-teal transition-colors" aria-label="LinkedIn">
                   <Linkedin size={24} />
                 </a>
                 <a href="mailto:mohankarthick52@gmail.com" className="text-white hover:text-devops-teal transition-colors" aria-label="Email">

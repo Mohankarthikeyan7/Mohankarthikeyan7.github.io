@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { DownloadIcon } from 'lucide-react';
@@ -7,7 +6,7 @@ const Resume = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="bg-devops-navy text-white py-16">
-        <div className="container-custom">
+        <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">Resume</h1>
           <p className="text-xl text-gray-300">
             Download my resume or view it online
@@ -15,7 +14,7 @@ const Resume = () => {
         </div>
       </div>
 
-      <div className="container-custom py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="bg-white shadow-sm rounded-lg border border-gray-200 p-8 mb-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
             <div>
@@ -23,10 +22,17 @@ const Resume = () => {
               <p className="text-gray-600">DevOps Engineer</p>
             </div>
             <div className="mt-4 md:mt-0">
-              <Button className="bg-devops-teal hover:bg-devops-teal/90 flex items-center">
-                <DownloadIcon size={18} className="mr-2" />
-                Download Resume
-              </Button>
+              <a
+                href="/resume/mohan_karthikeyan_cv.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-devops-teal hover:bg-devops-teal/90 flex items-center">
+                  <DownloadIcon size={18} className="mr-2" />
+                  Download Resume
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -37,8 +43,8 @@ const Resume = () => {
               automation, and security in AWS and Azure and on-premises (hybrid) environments.
             </p>
             <p className="text-gray-700 mb-2">
-              Exceptional Skills in Container technologies, AWS, GCP and Azure Cloud, Linux Administration, 
-              CI/CD Integration, working in fast paced Agile Environment.
+              Exceptional skills in container technologies, AWS, GCP and Azure Cloud, Linux Administration, 
+              CI/CD Integration, and working in fast-paced Agile environments.
             </p>
             <p className="text-gray-700">
               Expert in containerization with Docker, orchestrating with Kubernetes, and managing infrastructure 
@@ -49,54 +55,25 @@ const Resume = () => {
           <div className="mb-8">
             <h3 className="text-xl font-bold text-devops-navy mb-4">Technical Skills</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Source Code Management:</span>
-                <span className="text-gray-700">Github, GitLab</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">CI/CD Tool:</span>
-                <span className="text-gray-700">GitHub Actions, Azure Devops, Jenkins</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Containerization Tool:</span>
-                <span className="text-gray-700">Docker, Kubernetes, ECS</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Code Quality Check Tool:</span>
-                <span className="text-gray-700">SonarQube</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">AWS Services:</span>
-                <span className="text-gray-700">EC2, VPC, IAM, SG, Lambda</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Container Management:</span>
-                <span className="text-gray-700">Portainer</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">IaC Tools:</span>
-                <span className="text-gray-700">Ansible, CloudFormation & Terraform</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Scripting Languages:</span>
-                <span className="text-gray-700">Bash, Python</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Operating System:</span>
-                <span className="text-gray-700">Windows, Linux (RHEL & Ubuntu)</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Monitoring and Logging:</span>
-                <span className="text-gray-700">Grafana, Loki, Prometheus, Cloudwatch</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Cloud Platform:</span>
-                <span className="text-gray-700">AWS, Azure Cloud, GCP</span>
-              </div>
-              <div className="flex">
-                <span className="font-medium min-w-[180px]">Networking:</span>
-                <span className="text-gray-700">TCP/IP, TLS, DNS, VPN, Load balancer, SSL</span>
-              </div>
+              {[
+                ["Source Code Management", "Github, GitLab"],
+                ["CI/CD Tool", "GitHub Actions, Azure DevOps, Jenkins"],
+                ["Containerization Tool", "Docker, Kubernetes, ECS"],
+                ["Code Quality Check Tool", "SonarQube"],
+                ["AWS Services", "EC2, VPC, IAM, SG, Lambda"],
+                ["Container Management", "Portainer"],
+                ["IaC Tools", "Ansible, CloudFormation & Terraform"],
+                ["Scripting Languages", "Bash, Python"],
+                ["Operating System", "Windows, Linux (RHEL & Ubuntu)"],
+                ["Monitoring and Logging", "Grafana, Loki, Prometheus, CloudWatch"],
+                ["Cloud Platform", "AWS, Azure Cloud, GCP"],
+                ["Networking", "TCP/IP, TLS, DNS, VPN, Load Balancer, SSL"]
+              ].map(([label, value], idx) => (
+                <div key={idx} className="flex">
+                  <span className="font-medium min-w-[180px]">{label}:</span>
+                  <span className="text-gray-700">{value}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -110,7 +87,10 @@ const Resume = () => {
               <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="flex items-center mb-4 md:mb-0">
                   <div className="bg-devops-blue/10 p-3 rounded-lg mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-devops-blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+                      className="text-devops-blue">
                       <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
                       <polyline points="14 2 14 8 20 8"></polyline>
                     </svg>
@@ -120,10 +100,17 @@ const Resume = () => {
                     <p className="text-sm text-gray-600">Last updated: May 20, 2025</p>
                   </div>
                 </div>
-                <Button className="bg-devops-blue hover:bg-devops-blue/90 flex items-center">
-                  <DownloadIcon size={18} className="mr-2" />
-                  Download PDF
-                </Button>
+                <a
+                  href="/resume/mohan_karthikeyan_cv.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-devops-blue hover:bg-devops-blue/90 flex items-center">
+                    <DownloadIcon size={18} className="mr-2" />
+                    Download PDF
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

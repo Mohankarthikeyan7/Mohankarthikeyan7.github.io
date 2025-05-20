@@ -133,7 +133,7 @@ const Contact = () => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      linkedin.com/in/mohankarthikeyan
+                      linkedin.com/in/mohan-karthick
                       <ExternalLink size={14} className="ml-1" />
                     </a>
                   </div>
