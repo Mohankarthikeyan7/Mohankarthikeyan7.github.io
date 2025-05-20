@@ -35,15 +35,6 @@ const Home = () => {
       skills: ["AWS CodePipeline", "Grafana"]
     },
     {
-      company: "University of Chester",
-      position: "Professional Development",
-      type: "Full-time",
-      period: "Oct 2023 - Nov 2024 · 1 yr 2 mos",
-      location: "Chester, England, United Kingdom · On-site",
-      responsibilities: [],
-      skills: []
-    },
-    {
       company: "GAVS Technologies",
       position: "DevOps Engineer",
       type: "Full-time",
