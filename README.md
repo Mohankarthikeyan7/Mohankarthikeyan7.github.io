@@ -6,9 +6,8 @@ A professional portfolio website showcasing skills, projects, and experience in 
 ## Project Overview
 
 This portfolio is built with:
-- **Frontend**: React with TypeScript, Tailwind CSS
-- **Backend**: Flask (Python)
-- **Hosting Options**: GitHub Pages (frontend) and Render (full-stack)
+- **Frontend**: React with TypeScript, Tailwind CSS, Shadcn/UI components
+- **Hosting**: GitHub Pages
 
 ## Features
 
@@ -23,14 +22,13 @@ This portfolio is built with:
 ### Prerequisites
 
 - Node.js (v16+)
-- Python (v3.8+)
 - Git
 
 ### Frontend Development
 
 ```bash
 # Clone the repository
-git clone https://github.com/mohankarthikeyan7/portfolio.git
+git clone https://github.com/YOUR_USERNAME/portfolio.git
 cd portfolio
 
 # Install dependencies
@@ -40,42 +38,56 @@ npm install
 npm run dev
 ```
 
-### Backend Development
+## Deployment to GitHub Pages
 
-```bash
-# Create a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### Step 1: Create a GitHub Repository
+1. Create a new repository on GitHub (e.g., `your-username.github.io` or `portfolio`)
+2. Initialize Git and add your repository as remote:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+   git push -u origin main
+   ```
 
-# Install dependencies
-pip install -r requirements.txt
+### Step 2: Configure for GitHub Pages
+1. Add the homepage field to package.json:
+   ```json
+   "homepage": "https://YOUR_USERNAME.github.io/REPO_NAME"
+   ```
+   (If using your-username.github.io as the repo name, use "homepage": "https://YOUR_USERNAME.github.io")
 
-# Run Flask server
-python app.py
-```
+2. Add the following scripts to package.json:
+   ```json
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -d dist"
+   ```
 
-## Deployment Instructions
+3. Install the gh-pages package:
+   ```bash
+   npm install --save-dev gh-pages
+   ```
 
-### GitHub Pages (Frontend Only)
+### Step 3: Deploy the Site
+1. Run the deploy command:
+   ```bash
+   npm run deploy
+   ```
 
-1. Update the `homepage` field in `package.json` to your GitHub Pages URL
-2. Build the project: `npm run build`
-3. Deploy to GitHub Pages: `npm run deploy`
+2. Go to your GitHub repository settings:
+   - Navigate to "Settings" > "Pages"
+   - Source should be set to "gh-pages" branch
+   - Wait a few minutes for your site to be published
 
-### Render (Full Stack)
-
-1. Create a new Web Service on Render
-2. Connect your repository
-3. Configure the following settings:
-   - Build Command: `npm install && npm run build`
-   - Start Command: `gunicorn app:app`
-4. Add environment variables if needed
+3. Your portfolio is now live at: `https://YOUR_USERNAME.github.io/REPO_NAME`
 
 ## Updating Your Resume
 
 1. Replace the file at `public/resume/mohan_karthikeyan_cv.pdf` with your updated resume
 2. Ensure the filename remains the same for consistent links
 3. Commit and push the changes to your repository
+4. Redeploy if needed: `npm run deploy`
 
 ## Contact
 
@@ -86,3 +98,4 @@ python app.py
 ## License
 
 MIT License
+

@@ -25,14 +25,15 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
+    // Note: This is a frontend-only implementation
+    // In a production environment, you would integrate with a form service like Formspree, EmailJS, etc.
     try {
-      // In a real implementation, this would be an API call to your Flask backend
+      // Simulate form submission delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Message received!",
+        description: "Since this is a static site, please reach out via email or LinkedIn for real inquiries.",
       });
       
       // Reset form
@@ -44,8 +45,8 @@ const Contact = () => {
       });
     } catch (error) {
       toast({
-        title: "Error sending message",
-        description: "There was a problem sending your message. Please try again.",
+        title: "Demo form only",
+        description: "This is a static contact form. Please use the email or LinkedIn links provided.",
         variant: "destructive",
       });
     } finally {
