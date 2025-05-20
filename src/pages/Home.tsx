@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink, Calendar, Database, Server, Code, Terminal, Settings, Cloud, Briefcase, Building, School } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Calendar, Database, Server, Code, Terminal, Settings, Cloud, Briefcase, Building, School, MapPin } from 'lucide-react';
 import { Card, CardContent } from "@/components/ui/card";
 
 const Home = () => {
