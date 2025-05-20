@@ -2,7 +2,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, ExternalLink, Calendar, Database, Server, Code, Terminal, Settings, Cloud } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Calendar, Database, Server, Code, Terminal, Settings, Cloud, Briefcase, Building, School } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
 
 const Home = () => {
   const skills = [
@@ -15,6 +16,85 @@ const Home = () => {
     { category: "Operating Systems", items: ["Linux (RHEL & Ubuntu)", "Windows"] },
     { category: "Source Control", items: ["GitHub", "GitLab"] },
     { category: "Code Quality", items: ["SonarQube"] },
+  ];
+
+  const experiences = [
+    {
+      company: "Go Rentals",
+      position: "DevOps Engineer",
+      type: "Contract",
+      period: "Nov 2024 - Present · 7 mos",
+      location: "London Area, United Kingdom · Remote",
+      responsibilities: [
+        "Infrastructure as Code: Utilized Terraform to deploy and manage ECS clusters in AWS, streamlining infrastructure provisioning and enhancing scalability.",
+        "CI/CD Pipeline Development: Designed and implemented CI/CD pipelines to automate the build, test, and deployment processes, ensuring faster and more reliable software delivery.",
+        "Automation with Ansible: Leveraged Ansible to automate the deployment of applications on servers, significantly reducing manual intervention and deployment time.",
+        "GitLab Repository Management: Maintained GitLab repositories for over 50 servers, ensuring version control and collaboration across development teams.",
+        "Container Monitoring: Monitored containerized applications using Grafana, Loki, and Promtail, providing real-time insights and improving system reliability.",
+        "On-Prem Development Environment: Managed the on-prem development environment using Proxmox, facilitating efficient resource allocation and virtualization."
+      ],
+      skills: ["AWS CodePipeline", "Grafana"]
+    },
+    {
+      company: "University of Chester",
+      position: "Professional Development",
+      type: "Full-time",
+      period: "Oct 2023 - Nov 2024 · 1 yr 2 mos",
+      location: "Chester, England, United Kingdom · On-site",
+      responsibilities: [],
+      skills: []
+    },
+    {
+      company: "GAVS Technologies",
+      position: "DevOps Engineer",
+      type: "Full-time",
+      period: "Mar 2023 - Oct 2023 · 8 mos",
+      location: "Chennai, Tamil Nadu, India · Hybrid",
+      responsibilities: [
+        "Maintained 99.9% uptime across 100+ servers in 15+ AWS accounts with proactive monitoring using CloudWatch.",
+        "Deployed scalable infrastructure with EC2, S3, and Load Balancer for high-availability solutions.",
+        "Optimized CI/CD pipelines via Jenkins, integrating Git, Terraform, and Kubernetes for seamless deployments.",
+        "Enhanced security protocols by managing IAM roles and performing routine key rotations.",
+        "Boosted operational visibility with custom dashboards on Prometheus and Grafana."
+      ],
+      skills: ["AWS CodePipeline", "DevOps"]
+    },
+    {
+      company: "Tata Communications Transformation Services (TCTS)",
+      position: "Cloud Support Engineer",
+      type: "Full-time",
+      period: "Oct 2021 - Nov 2022 · 1 yr 2 mos",
+      location: "Chennai, Tamil Nadu, India · Hybrid",
+      responsibilities: [
+        "Managed 50+ AWS EC2 instances, reducing cloud costs by 15% through resource optimization.",
+        "Automated server provisioning using Terraform, achieving a 40% improvement in deployment speed.",
+        "Created secure and cost-effective solutions with DynamoDB, Lambda, and VPC configurations.",
+        "Ensured system reliability by implementing AWS-native load balancers and fault-tolerant architectures."
+      ],
+      skills: ["Jira", "Cloud Infrastructure"]
+    },
+    {
+      company: "ACT FIBERNET",
+      position: "Technical Support Engineer",
+      type: "Full-time",
+      period: "Jan 2020 - Jun 2021 · 1 yr 6 mos",
+      location: "Chennai, Tamil Nadu, India · On-site",
+      responsibilities: [
+        "Redesigned high-fault networks, reducing downtime by 20% through targeted optimizations.",
+        "Supervised critical fault rectifications, achieving SLA compliance and receiving performance incentives.",
+        "Collaborated with the NOC team during crises, ensuring minimal service disruption during natural disasters."
+      ],
+      skills: ["VLAN", "LAN Switching"]
+    },
+    {
+      company: "ACT FIBERNET",
+      position: "Network Engineer",
+      type: "",
+      period: "Oct 2017 - Jan 2020 · 2 yrs 4 mos",
+      location: "Chennai, Tamil Nadu, India",
+      responsibilities: [],
+      skills: []
+    }
   ];
 
   return (
@@ -54,10 +134,6 @@ const Home = () => {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in">
               <h3 className="text-xl font-medium mb-4">Professional Info</h3>
               <div className="space-y-3">
-                <div className="flex items-center text-gray-300">
-                  <Calendar size={18} className="mr-3" />
-                  <span>Experience: 6 Years</span>
-                </div>
                 <div className="flex items-center text-gray-300">
                   <Mail size={18} className="mr-3" />
                   <span>mohankarthick52@gmail.com</span>
@@ -128,8 +204,64 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
+      {/* Experience Section */}
       <section className="py-20 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="section-heading">Professional Experience</h2>
+          
+          <div className="space-y-8">
+            {experiences.map((exp, index) => (
+              <Card key={index} className="border-l-4 border-l-devops-teal">
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-devops-navy">{exp.position}</h3>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Building size={18} className="text-devops-blue" />
+                        <span className="font-medium">{exp.company}</span>
+                        {exp.type && <span className="text-gray-500">· {exp.type}</span>}
+                      </div>
+                      <div className="flex items-center gap-2 mt-1 text-gray-600">
+                        <Calendar size={16} />
+                        <span>{exp.period}</span>
+                      </div>
+                      <div className="flex items-center gap-2 mt-1 text-gray-600">
+                        <MapPin size={16} />
+                        <span>{exp.location}</span>
+                      </div>
+                    </div>
+                    {exp.skills.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {exp.skills.map((skill, skillIdx) => (
+                          <span key={skillIdx} className="px-2 py-1 bg-devops-blue/10 text-devops-blue text-xs rounded-full">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  
+                  {exp.responsibilities.length > 0 && (
+                    <div className="mt-4">
+                      <ul className="space-y-2">
+                        {exp.responsibilities.map((resp, respIdx) => (
+                          <li key={respIdx} className="text-gray-700 flex">
+                            <span className="text-devops-teal mr-2">→</span>
+                            <span>{resp}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="py-20 bg-white">
         <div className="container-custom">
           <h2 className="section-heading">Technical Skills</h2>
           
@@ -152,7 +284,7 @@ const Home = () => {
       </section>
       
       {/* Featured Projects Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <h2 className="section-heading">Featured Projects</h2>
           
