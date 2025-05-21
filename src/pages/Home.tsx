@@ -67,7 +67,7 @@ const Home = () => {
       company: "ACT FIBERNET",
       position: "Technical Support Engineer",
       type: "Full-time",
-      period: "Jan 2020 - Jun 2021 · 1 yr 6 mos",
+      period: "Oct 2017 - Jun 2021 · 3 years 8 mos",
       location: "Chennai, Tamil Nadu, India · On-site",
       responsibilities: [
         "Redesigned high-fault networks, reducing downtime by 20% through targeted optimizations.",
@@ -76,15 +76,15 @@ const Home = () => {
       ],
       skills: ["Networking", "Security"]
     },
-    {
-      company: "ACT FIBERNET",
-      position: "Network Engineer",
-      type: "",
-      period: "Oct 2017 - Jan 2020 · 2 yrs 4 mos",
-      location: "Chennai, Tamil Nadu, India",
-      responsibilities: [],
-      skills: []
-    }
+    // {
+    //   company: "ACT FIBERNET",
+    //   position: "Network Engineer",
+    //   type: "",
+    //   period: "Oct 2017 - Jan 2020 · 2 yrs 4 mos",
+    //   location: "Chennai, Tamil Nadu, India",
+    //   responsibilities: [],
+    //   skills: []
+    // }
   ];
 
   return (
