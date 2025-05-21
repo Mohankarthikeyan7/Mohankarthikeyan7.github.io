@@ -123,8 +123,8 @@ const Home = () => {
             </div>
             
             <div className="relative md:pb-24">
-              {/* Profile picture - moved even higher */}
-              <div className="absolute -top-24 -right-8 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-devops-teal shadow-xl">
+              {/* Profile picture - adjusted position left */}
+              <div className="absolute -top-24 -right-16 md:-right-24 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-devops-teal shadow-xl">
                 <img 
                   src="/lovable-uploads/f4a1f7ee-dadc-4661-8e14-74c7ad3c8d17.png" 
                   alt="Mohan Karthikeyan in graduation attire" 
@@ -132,8 +132,8 @@ const Home = () => {
                 />
               </div>
               
-              {/* Professional info - moved further down with more top margin */}
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in mt-24">
+              {/* Professional info - moved much further down */}
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in mt-32">
                 <h3 className="text-xl font-medium mb-4">Professional Info</h3>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-300">
