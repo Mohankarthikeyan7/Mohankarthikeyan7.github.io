@@ -123,8 +123,8 @@ const Home = () => {
             </div>
             
             <div className="relative md:pb-24">
-              {/* Profile picture - centered above professional info */}
-              <div className="absolute -top-24 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-1/3 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-devops-teal shadow-xl">
+              {/* Profile picture - moved down to align with name and buttons */}
+              <div className="absolute top-8 right-1/2 transform translate-x-1/2 md:translate-x-0 md:right-1/3 w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-devops-teal shadow-xl">
                 <img 
                   src="/lovable-uploads/f4a1f7ee-dadc-4661-8e14-74c7ad3c8d17.png" 
                   alt="Mohan Karthikeyan in graduation attire" 
@@ -132,8 +132,8 @@ const Home = () => {
                 />
               </div>
               
-              {/* Professional info - positioned below the profile picture with sufficient spacing */}
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in mt-32">
+              {/* Professional info - moved down to align with the buttons area */}
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in mt-56">
                 <h3 className="text-xl font-medium mb-4">Professional Info</h3>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-300">
