@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -132,8 +131,8 @@ const Home = () => {
                 />
               </div>
               
-              {/* Professional info - moved down to align with the buttons area */}
-              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in mt-56">
+              {/* Professional info - moved down with additional spacing from profile picture */}
+              <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 animate-fade-in mt-72">
                 <h3 className="text-xl font-medium mb-4">Professional Info</h3>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-300">
