@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -6,13 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Home = () => {
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS", "Azure", "GCP", "On-prem Data Center"] },
-    { category: "CI/CD", items: ["GitHub Actions", "Azure DevOps", "Jenkins", "CodePipeline"] },
+    { category: "Cloud Platforms", items: ["AWS", "Azure", "GCP"] },
+    { category: "CI/CD", items: ["GitHub Actions", "Azure DevOps", "Jenkins"] },
     { category: "Containerization", items: ["Docker", "Kubernetes", "ECS", "Portainer"] },
     { category: "IaC", items: ["Terraform", "Ansible", "CloudFormation"] },
-    { category: "Monitoring", items: ["Grafana", "Loki", "Prometheus", "CloudWatch", "Zabbix"] },
-    { category: "Scripting", items: ["Bash", "Python", "Yaml"] },
-    { category: "Operating Systems", items: ["Linux (RHEL, Debian & Ubuntu)", "Windows"] },
+    { category: "Monitoring", items: ["Grafana", "Loki", "Prometheus", "CloudWatch"] },
+    { category: "Scripting", items: ["Bash", "Python"] },
+    { category: "Operating Systems", items: ["Linux (RHEL & Ubuntu)", "Windows"] },
     { category: "Source Control", items: ["GitHub", "GitLab"] },
     { category: "Code Quality", items: ["SonarQube"] },
   ];
@@ -32,7 +33,7 @@ const Home = () => {
         "Container Monitoring: Monitored containerized applications using Grafana, Loki, and Promtail, providing real-time insights and improving system reliability.",
         "On-Prem Development Environment: Managed the on-prem development environment using Proxmox, facilitating efficient resource allocation and virtualization."
       ],
-      skills: ["AWS CodePipeline", "Grafana"]
+      skills: ["AWS","GCP", "On-prem Server"]
     },
     {
       company: "GAVS Technologies",
@@ -47,7 +48,7 @@ const Home = () => {
         "Enhanced security protocols by managing IAM roles and performing routine key rotations.",
         "Boosted operational visibility with custom dashboards on Prometheus and Grafana."
       ],
-      skills: ["AWS CodePipeline", "DevOps"]
+      skills: ["AWS","Azure"]
     },
     {
       company: "Tata Communications Transformation Services (TCTS)",
@@ -61,20 +62,29 @@ const Home = () => {
         "Created secure and cost-effective solutions with DynamoDB, Lambda, and VPC configurations.",
         "Ensured system reliability by implementing AWS-native load balancers and fault-tolerant architectures."
       ],
-      skills: ["Jira", "Cloud Infrastructure"]
+      skills: ["AWS", "Networking"]
     },
     {
       company: "ACT FIBERNET",
       position: "Technical Support Engineer",
       type: "Full-time",
-      period: "Oct 2017 - Jun 2021 · 3 yrs 8 mos",
+      period: "Jan 2020 - Jun 2021 · 1 yr 6 mos",
       location: "Chennai, Tamil Nadu, India · On-site",
       responsibilities: [
         "Redesigned high-fault networks, reducing downtime by 20% through targeted optimizations.",
         "Supervised critical fault rectifications, achieving SLA compliance and receiving performance incentives.",
         "Collaborated with the NOC team during crises, ensuring minimal service disruption during natural disasters."
       ],
-      skills: ["VLAN", "LAN Switching"]
+      skills: ["Networking", "Security"]
+    },
+    {
+      company: "ACT FIBERNET",
+      position: "Network Engineer",
+      type: "",
+      period: "Oct 2017 - Jan 2020 · 2 yrs 4 mos",
+      location: "Chennai, Tamil Nadu, India",
+      responsibilities: [],
+      skills: []
     }
   ];
 
@@ -130,7 +140,7 @@ const Home = () => {
                 <a href="https://github.com/mohankarthikeyan7" className="text-white hover:text-devops-teal transition-colors" aria-label="GitHub">
                   <Github size={24} />
                 </a>
-                <a href="https://www.linkedin.com/in/mohan-karthick" className="text-white hover:text-devops-teal transition-colors" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/mohankarthikeyan" className="text-white hover:text-devops-teal transition-colors" aria-label="LinkedIn">
                   <Linkedin size={24} />
                 </a>
                 <a href="mailto:mohankarthick52@gmail.com" className="text-white hover:text-devops-teal transition-colors" aria-label="Email">
@@ -178,45 +188,45 @@ const Home = () => {
           <h2 className="section-heading">About Me</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-justify">
+              <p className="text-lg text-gray-700 mb-6">
                 I'm a DevOps engineer with over 6 years of experience specializing in cloud infrastructure, 
                 automation, and security in AWS, Azure, and on-premises (hybrid) environments.
               </p>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-justify">
+              <p className="text-lg text-gray-700 mb-6">
                 My expertise lies in containerization with Docker, orchestrating with Kubernetes, and 
                 managing infrastructure as code with a strong focus on Terraform for AWS and other cloud providers.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed text-justify">
+              <p className="text-lg text-gray-700">
                 I thrive in fast-paced Agile environments and am passionate about implementing efficient CI/CD pipelines
                 that enable seamless software delivery.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-devops-navy mb-6">Key Expertise</h3>
-              <ul className="space-y-4">
+              <h3 className="text-xl font-bold text-devops-navy mb-4">Key Expertise</h3>
+              <ul className="space-y-3">
                 <li className="flex items-start">
-                  <Cloud size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">Cloud infrastructure management in AWS, Azure, and GCP</span>
+                  <Cloud size={20} className="text-devops-teal mt-1 mr-3" />
+                  <span>Cloud infrastructure management in AWS, Azure, and GCP</span>
                 </li>
                 <li className="flex items-start">
-                  <Code size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">Infrastructure as Code using Terraform, Ansible, and CloudFormation</span>
+                  <Code size={20} className="text-devops-teal mt-1 mr-3" />
+                  <span>Infrastructure as Code using Terraform, Ansible, and CloudFormation</span>
                 </li>
                 <li className="flex items-start">
-                  <Server size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">Container orchestration with Kubernetes and Docker</span>
+                  <Server size={20} className="text-devops-teal mt-1 mr-3" />
+                  <span>Container orchestration with Kubernetes and Docker</span>
                 </li>
                 <li className="flex items-start">
-                  <Terminal size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">Scripting and automation with Bash and Python</span>
+                  <Terminal size={20} className="text-devops-teal mt-1 mr-3" />
+                  <span>Scripting and automation with Bash and Python</span>
                 </li>
                 <li className="flex items-start">
-                  <Settings size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">CI/CD pipeline design and implementation</span>
+                  <Settings size={20} className="text-devops-teal mt-1 mr-3" />
+                  <span>CI/CD pipeline design and implementation</span>
                 </li>
                 <li className="flex items-start">
-                  <Database size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
-                  <span className="text-gray-700 leading-relaxed">Monitoring and observability solutions</span>
+                  <Database size={20} className="text-devops-teal mt-1 mr-3" />
+                  <span>Monitoring and observability solutions</span>
                 </li>
               </ul>
             </div>
@@ -234,18 +244,18 @@ const Home = () => {
               <Card key={index} className="border-l-4 border-l-devops-teal">
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-devops-navy mb-2">{exp.position}</h3>
-                      <div className="flex items-center gap-2 mb-2">
+                    <div>
+                      <h3 className="text-xl font-bold text-devops-navy">{exp.position}</h3>
+                      <div className="flex items-center gap-2 mt-1">
                         <Building size={18} className="text-devops-blue" />
-                        <span className="font-medium text-gray-800">{exp.company}</span>
+                        <span className="font-medium">{exp.company}</span>
                         {exp.type && <span className="text-gray-500">· {exp.type}</span>}
                       </div>
-                      <div className="flex items-center gap-2 mb-2 text-gray-600">
+                      <div className="flex items-center gap-2 mt-1 text-gray-600">
                         <Calendar size={16} />
                         <span>{exp.period}</span>
                       </div>
-                      <div className="flex items-center gap-2 mb-4 text-gray-600">
+                      <div className="flex items-center gap-2 mt-1 text-gray-600">
                         <MapPin size={16} />
                         <span>{exp.location}</span>
                       </div>
@@ -253,7 +263,7 @@ const Home = () => {
                     {exp.skills.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {exp.skills.map((skill, skillIdx) => (
-                          <span key={skillIdx} className="px-3 py-1 bg-devops-blue/10 text-devops-blue text-xs rounded-full font-medium">
+                          <span key={skillIdx} className="px-2 py-1 bg-devops-blue/10 text-devops-blue text-xs rounded-full">
                             {skill}
                           </span>
                         ))}
@@ -263,11 +273,11 @@ const Home = () => {
                   
                   {exp.responsibilities.length > 0 && (
                     <div className="mt-4">
-                      <ul className="space-y-3">
+                      <ul className="space-y-2">
                         {exp.responsibilities.map((resp, respIdx) => (
-                          <li key={respIdx} className="text-gray-700 flex leading-relaxed">
-                            <span className="text-devops-teal mr-3 flex-shrink-0 mt-1">→</span>
-                            <span className="text-justify">{resp}</span>
+                          <li key={respIdx} className="text-gray-700 flex">
+                            <span className="text-devops-teal mr-2">→</span>
+                            <span>{resp}</span>
                           </li>
                         ))}
                       </ul>
