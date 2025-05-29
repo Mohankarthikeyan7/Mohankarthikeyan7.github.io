@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -68,7 +67,7 @@ const Home = () => {
       company: "ACT FIBERNET",
       position: "Technical Support Engineer",
       type: "Full-time",
-      period: "Jan 2020 - Jun 2021 · 1 yr 6 mos",
+      period: "Oct 2017 - Jun 2021 · 3 yrs 8 mos",
       location: "Chennai, Tamil Nadu, India · On-site",
       responsibilities: [
         "Redesigned high-fault networks, reducing downtime by 20% through targeted optimizations.",
@@ -76,15 +75,6 @@ const Home = () => {
         "Collaborated with the NOC team during crises, ensuring minimal service disruption during natural disasters."
       ],
       skills: ["VLAN", "LAN Switching"]
-    },
-    {
-      company: "ACT FIBERNET",
-      position: "Network Engineer",
-      type: "",
-      period: "Oct 2017 - Jan 2020 · 2 yrs 4 mos",
-      location: "Chennai, Tamil Nadu, India",
-      responsibilities: [],
-      skills: []
     }
   ];
 
@@ -293,23 +283,18 @@ const Home = () => {
       {/* Skills Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
-          <div className="flex items-center mb-8">
-            <div className="w-8 h-1 bg-devops-teal mr-3"></div>
-            <h2 className="text-3xl font-bold text-devops-navy">Technical Skills</h2>
-          </div>
+          <h2 className="section-heading">Technical Skills</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="text-lg font-semibold text-blue-600 mb-4">{skill.category}</h3>
-                <div className="space-y-2">
+                <h3 className="text-lg font-bold text-devops-blue mb-4">{skill.category}</h3>
+                <div className="flex flex-wrap gap-2">
                   {skill.items.map((item, idx) => (
-                    <div key={idx} className="text-gray-700 text-sm py-1">
-                      {item}
-                    </div>
+                    <span key={idx} className="skill-tag">{item}</span>
                   ))}
                 </div>
               </div>
