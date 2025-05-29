@@ -178,45 +178,45 @@ const Home = () => {
           <h2 className="section-heading">About Me</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-justify">
                 I'm a DevOps engineer with over 6 years of experience specializing in cloud infrastructure, 
                 automation, and security in AWS, Azure, and on-premises (hybrid) environments.
               </p>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed text-justify">
                 My expertise lies in containerization with Docker, orchestrating with Kubernetes, and 
                 managing infrastructure as code with a strong focus on Terraform for AWS and other cloud providers.
               </p>
-              <p className="text-lg text-gray-700">
+              <p className="text-lg text-gray-700 leading-relaxed text-justify">
                 I thrive in fast-paced Agile environments and am passionate about implementing efficient CI/CD pipelines
                 that enable seamless software delivery.
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-devops-navy mb-4">Key Expertise</h3>
-              <ul className="space-y-3">
+              <h3 className="text-xl font-bold text-devops-navy mb-6">Key Expertise</h3>
+              <ul className="space-y-4">
                 <li className="flex items-start">
-                  <Cloud size={20} className="text-devops-teal mt-1 mr-3" />
-                  <span>Cloud infrastructure management in AWS, Azure, and GCP</span>
+                  <Cloud size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 leading-relaxed">Cloud infrastructure management in AWS, Azure, and GCP</span>
                 </li>
                 <li className="flex items-start">
-                  <Code size={20} className="text-devops-teal mt-1 mr-3" />
-                  <span>Infrastructure as Code using Terraform, Ansible, and CloudFormation</span>
+                  <Code size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 leading-relaxed">Infrastructure as Code using Terraform, Ansible, and CloudFormation</span>
                 </li>
                 <li className="flex items-start">
-                  <Server size={20} className="text-devops-teal mt-1 mr-3" />
-                  <span>Container orchestration with Kubernetes and Docker</span>
+                  <Server size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 leading-relaxed">Container orchestration with Kubernetes and Docker</span>
                 </li>
                 <li className="flex items-start">
-                  <Terminal size={20} className="text-devops-teal mt-1 mr-3" />
-                  <span>Scripting and automation with Bash and Python</span>
+                  <Terminal size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 leading-relaxed">Scripting and automation with Bash and Python</span>
                 </li>
                 <li className="flex items-start">
-                  <Settings size={20} className="text-devops-teal mt-1 mr-3" />
-                  <span>CI/CD pipeline design and implementation</span>
+                  <Settings size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 leading-relaxed">CI/CD pipeline design and implementation</span>
                 </li>
                 <li className="flex items-start">
-                  <Database size={20} className="text-devops-teal mt-1 mr-3" />
-                  <span>Monitoring and observability solutions</span>
+                  <Database size={20} className="text-devops-teal mt-1 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 leading-relaxed">Monitoring and observability solutions</span>
                 </li>
               </ul>
             </div>
@@ -234,18 +234,18 @@ const Home = () => {
               <Card key={index} className="border-l-4 border-l-devops-teal">
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
-                    <div>
-                      <h3 className="text-xl font-bold text-devops-navy">{exp.position}</h3>
-                      <div className="flex items-center gap-2 mt-1">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-devops-navy mb-2">{exp.position}</h3>
+                      <div className="flex items-center gap-2 mb-2">
                         <Building size={18} className="text-devops-blue" />
-                        <span className="font-medium">{exp.company}</span>
+                        <span className="font-medium text-gray-800">{exp.company}</span>
                         {exp.type && <span className="text-gray-500">· {exp.type}</span>}
                       </div>
-                      <div className="flex items-center gap-2 mt-1 text-gray-600">
+                      <div className="flex items-center gap-2 mb-2 text-gray-600">
                         <Calendar size={16} />
                         <span>{exp.period}</span>
                       </div>
-                      <div className="flex items-center gap-2 mt-1 text-gray-600">
+                      <div className="flex items-center gap-2 mb-4 text-gray-600">
                         <MapPin size={16} />
                         <span>{exp.location}</span>
                       </div>
@@ -253,7 +253,7 @@ const Home = () => {
                     {exp.skills.length > 0 && (
                       <div className="flex flex-wrap gap-2">
                         {exp.skills.map((skill, skillIdx) => (
-                          <span key={skillIdx} className="px-2 py-1 bg-devops-blue/10 text-devops-blue text-xs rounded-full">
+                          <span key={skillIdx} className="px-3 py-1 bg-devops-blue/10 text-devops-blue text-xs rounded-full font-medium">
                             {skill}
                           </span>
                         ))}
@@ -263,11 +263,11 @@ const Home = () => {
                   
                   {exp.responsibilities.length > 0 && (
                     <div className="mt-4">
-                      <ul className="space-y-2">
+                      <ul className="space-y-3">
                         {exp.responsibilities.map((resp, respIdx) => (
-                          <li key={respIdx} className="text-gray-700 flex">
-                            <span className="text-devops-teal mr-2">→</span>
-                            <span>{resp}</span>
+                          <li key={respIdx} className="text-gray-700 flex leading-relaxed">
+                            <span className="text-devops-teal mr-3 flex-shrink-0 mt-1">→</span>
+                            <span className="text-justify">{resp}</span>
                           </li>
                         ))}
                       </ul>
