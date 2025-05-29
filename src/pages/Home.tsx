@@ -94,7 +94,7 @@ const Home = () => {
       <section 
         className="relative py-20 text-white overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3543&q=80')`,
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed'
