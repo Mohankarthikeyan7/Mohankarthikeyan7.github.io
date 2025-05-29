@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
@@ -89,9 +90,36 @@ const Home = () => {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-devops-navy to-devops-blue py-20 text-white">
-        <div className="container-custom">
+      {/* Hero Section with DevOps Background */}
+      <section 
+        className="relative py-20 text-white overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(30, 58, 138, 0.85), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3543&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        {/* Animated code particles overlay */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-10 text-green-400 font-mono text-sm animate-pulse">
+            docker build -t app .
+          </div>
+          <div className="absolute top-32 right-20 text-blue-400 font-mono text-sm animate-pulse delay-1000">
+            kubectl apply -f deployment.yaml
+          </div>
+          <div className="absolute bottom-32 left-20 text-yellow-400 font-mono text-sm animate-pulse delay-2000">
+            terraform apply
+          </div>
+          <div className="absolute bottom-20 right-32 text-cyan-400 font-mono text-sm animate-pulse delay-500">
+            aws s3 sync ./build s3://bucket
+          </div>
+          <div className="absolute top-1/2 left-1/4 text-purple-400 font-mono text-sm animate-pulse delay-1500">
+            ansible-playbook deploy.yml
+          </div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Mohan Karthikeyan</h1>
