@@ -7,13 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const Home = () => {
   const skills = [
-    { category: "Cloud Platforms", items: ["AWS", "Azure", "GCP"] },
-    { category: "CI/CD", items: ["GitHub Actions", "Azure DevOps", "Jenkins"] },
+    { category: "Cloud Platforms", items: ["AWS", "Azure", "GCP", "On-prem Data Center"] },
+    { category: "CI/CD", items: ["GitHub Actions", "Azure DevOps", "Jenkins", "CodePipeline"] },
     { category: "Containerization", items: ["Docker", "Kubernetes", "ECS", "Portainer"] },
     { category: "IaC", items: ["Terraform", "Ansible", "CloudFormation"] },
-    { category: "Monitoring", items: ["Grafana", "Loki", "Prometheus", "CloudWatch"] },
-    { category: "Scripting", items: ["Bash", "Python"] },
-    { category: "Operating Systems", items: ["Linux (RHEL & Ubuntu)", "Windows"] },
+    { category: "Monitoring", items: ["Grafana", "Loki", "Prometheus", "CloudWatch", "Zabbix"] },
+    { category: "Scripting", items: ["Bash", "Python", "Yaml"] },
+    { category: "Operating Systems", items: ["Linux (RHEL, Debian & Ubuntu)", "Windows"] },
     { category: "Source Control", items: ["GitHub", "GitLab"] },
     { category: "Code Quality", items: ["SonarQube"] },
   ];
@@ -140,7 +140,7 @@ const Home = () => {
                 <a href="https://github.com/mohankarthikeyan7" className="text-white hover:text-devops-teal transition-colors" aria-label="GitHub">
                   <Github size={24} />
                 </a>
-                <a href="https://linkedin.com/in/mohankarthikeyan" className="text-white hover:text-devops-teal transition-colors" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/mohan-karthick" className="text-white hover:text-devops-teal transition-colors" aria-label="LinkedIn">
                   <Linkedin size={24} />
                 </a>
                 <a href="mailto:mohankarthick52@gmail.com" className="text-white hover:text-devops-teal transition-colors" aria-label="Email">
@@ -293,18 +293,23 @@ const Home = () => {
       {/* Skills Section */}
       <section className="py-20 bg-white">
         <div className="container-custom">
-          <h2 className="section-heading">Technical Skills</h2>
+          <div className="flex items-center mb-8">
+            <div className="w-8 h-1 bg-devops-teal mr-3"></div>
+            <h2 className="text-3xl font-bold text-devops-navy">Technical Skills</h2>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => (
               <div 
                 key={index} 
-                className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
               >
-                <h3 className="text-lg font-bold text-devops-blue mb-4">{skill.category}</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="text-lg font-semibold text-blue-600 mb-4">{skill.category}</h3>
+                <div className="space-y-2">
                   {skill.items.map((item, idx) => (
-                    <span key={idx} className="skill-tag">{item}</span>
+                    <div key={idx} className="text-gray-700 text-sm py-1">
+                      {item}
+                    </div>
                   ))}
                 </div>
               </div>
