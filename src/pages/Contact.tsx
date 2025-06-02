@@ -128,12 +128,12 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-gray-900">LinkedIn</h3>
                     <a 
-                      href="https://linkedin.com/in/mohankarthikeyan" 
+                      href="https://linkedin.com/in/mohan-karthick" 
                       className="text-devops-teal hover:underline mt-1 inline-flex items-center"
                       target="_blank"
                       rel="noreferrer"
                     >
-                      linkedin.com/in/mohankarthikeyan
+                      linkedin.com/in/mohan-karthick
                       <ExternalLink size={14} className="ml-1" />
                     </a>
                   </div>
